@@ -1,0 +1,133 @@
+/* Global Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    background-image: url(bg.png);
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 90%;
+    width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Heading */
+h1 {
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+    border-color: #ff5e62;
+    box-shadow: 0px 0px 8px rgba(255, 94, 98, 0.5);
+    outline: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    background-color: #ff5e62;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #e14a52;
+    box-shadow: 0px 5px 15px rgba(225, 74, 82, 0.4);
+}
+
+/* Recommendations Section */
+#results {
+    margin-top: 20px;
+}
+
+/* Restaurant Card */
+.restaurant-card {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.restaurant-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Restaurant Name */
+.restaurant-card h3 {
+    color: #ff5e62;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Details */
+.restaurant-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .restaurant-card h3 {
+        font-size: 20px;
+    }
+
+    .restaurant-card p {
+        font-size: 14px;
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Restaurant Recommendation System</h1>
+        
+        <label for="budget">Enter your budget (for 2 people): ₹</label>
+        <input type="number" id="budget" placeholder="Enter budget">
+
+        <label for="category">Select a category:</label>
+        <select id="category">
+            <option value="">-- Select Category --</option>
+            {% for category in categories %}
+                <option value="{{ category }}">{{ category }}</option>
+            {% endfor %}
+        </select>
+        
+        <button onclick="getRecommendations()">Get Recommendations</button>
+
+        <h2>Recommended Restaurants:</h2>
+        <div id="results"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
